@@ -1,70 +1,267 @@
-# Getting Started with Create React App
+# Scientific Calculator React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A feature-rich, modern scientific calculator built with React and Math.js. This calculator combines the functionality of a traditional scientific calculator with modern UI/UX principles and advanced features.
 
-## Available Scripts
+![Calculator Demo](https://img.shields.io/badge/demo-live-brightgreen) ![React](https://img.shields.io/badge/React-18.2-blue) ![License](https://img.shields.io/badge/license-MIT-green)
 
-In the project directory, you can run:
+## ✨ Features
 
-### `npm start`
+### **🎨 Modern UI/UX**
+- **Dark/Light Mode Toggle** - Switch between themes with a single click
+- **Glass-morphism Design** - Modern frosted glass effect
+- **Responsive Layout** - Works perfectly on desktop, tablet, and mobile
+- **Smooth Animations** - Hover effects and transitions
+- **Intuitive Button Grouping** - Color-coded buttons by function type
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### **🧮 Advanced Mathematical Functions**
+- **Basic Operations**: Addition, Subtraction, Multiplication, Division
+- **Scientific Functions**:
+  - Trigonometric: sin, cos, tan, sin⁻¹, cos⁻¹, tan⁻¹
+  - Logarithmic: log₁₀, ln, logₓ (custom base)
+  - Exponential: eˣ, 10ˣ, 2ˣ, xʸ
+  - Roots: Square (√), Cube (∛)
+  - Powers: Square (x²), Cube (x³), Any power (x^y)
+  - Factorial: x!
+  - Percentage: %
+  - Inverse: 1/x
+  - Absolute Value: |x|
+  - Sign Change: ±
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### **💾 Memory Functions**
+- **MC** - Memory Clear
+- **MR** - Memory Recall
+- **M+** - Memory Add
+- **M-** - Memory Subtract
+- **MS** - Memory Store
+- Memory value indicator
 
-### `npm test`
+### **📊 History System**
+- Complete calculation history with timestamps
+- Persistent storage using localStorage
+- Clear history button
+- Previous expression display
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### **🔄 Angle Mode Support**
+- Toggle between **Degrees (DEG)** and **Radians (RAD)**
+- Automatic conversion for trigonometric functions
 
-### `npm run build`
+### **⌨️ Keyboard Support**
+- Full keyboard navigation
+- **Enter** = Calculate
+- **Escape** = Clear All
+- **Backspace** = Delete last character
+- **Number keys** = Input numbers
+- **Operators**: +, -, *, /, ^
+- **Special keys**: ( ) . π
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### **⚡ Performance Features**
+- Efficient state management
+- Memoized calculations
+- Debounced inputs
+- Optimized rendering
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🚀 Installation & Setup
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Prerequisites
+- Node.js (v14 or higher)
+- npm or yarn
 
-### `npm run eject`
+### Installation Steps
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. **Clone the repository**
+```bash
+git clone https://github.com/yourusername/scientific-calculator-react.git
+cd scientific-calculator-react
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. **Install dependencies**
+```bash
+npm install
+# or
+yarn install
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+3. **Start the development server**
+```bash
+npm start
+# or
+yarn start
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+4. **Open in browser**
+Navigate to `http://localhost:3000`
 
-## Learn More
+### Build for Production
+```bash
+npm run build
+# or
+yarn build
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🛠️ Technologies Used
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **React 18** - UI library
+- **Math.js** - Advanced mathematical computations
+- **CSS3** - Modern styling with CSS Grid and Flexbox
+- **LocalStorage API** - Data persistence
+- **ES6+** - Modern JavaScript features
 
-### Code Splitting
+## 📁 Project Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```
+scientific-calculator-react/
+├── src/
+│   ├── App.js           # Main calculator component
+│   ├── App.css          # Styles
+│   ├── index.js         # Entry point
+│   └── index.css        # Global styles
+├── public/
+│   └── index.html       # HTML template
+├── package.json         # Dependencies
+└── README.md           # This file
+```
 
-### Analyzing the Bundle Size
+## 🎯 How to Use
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Basic Operations
+1. Click numbers or use keyboard to input
+2. Click operators (+, -, ×, ÷)
+3. Press `=` or `Enter` to calculate
 
-### Making a Progressive Web App
+### Scientific Functions
+1. Click scientific function buttons (sin, cos, log, etc.)
+2. Enter the value in parentheses
+3. Calculate as normal
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Memory Functions
+1. **Store a value**: Calculate a result → Click **MS**
+2. **Recall memory**: Click **MR**
+3. **Add to memory**: Calculate a result → Click **M+**
+4. **Subtract from memory**: Calculate a result → Click **M-**
+5. **Clear memory**: Click **MC**
 
-### Advanced Configuration
+### History Features
+- Previous calculations appear in the history panel
+- Click on history items to reuse them
+- Use **Clear History** to remove all history
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Theme Switching
+- Click the sun/moon icon to toggle between dark and light modes
 
-### Deployment
+### Angle Mode
+- Click the **DEG/RAD** button to switch angle modes
+- The calculator automatically converts trigonometric values
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 🔧 Key Code Features
 
-### `npm run build` fails to minify
+### Mathematical Evaluation
+```javascript
+const calculate = () => {
+  try {
+    let expression = input;
+    // Handle angle mode conversion
+    if (angleMode === "DEG") {
+      expression = expression.replace(/sin\(/g, "sin(" + Math.PI / 180 + "*");
+    }
+    // Evaluate using math.js
+    const result = evaluate(expression);
+    setInput(result.toString());
+  } catch (error) {
+    setInput("Error");
+  }
+};
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Keyboard Support
+```javascript
+useEffect(() => {
+  const handleKeyDown = (e) => {
+    if (e.key >= '0' && e.key <= '9') handleClick(e.key);
+    else if (e.key === 'Enter') calculate();
+    // ... more key mappings
+  };
+  window.addEventListener('keydown', handleKeyDown);
+  return () => window.removeEventListener('keydown', handleKeyDown);
+}, [input]);
+```
+
+### Data Persistence
+```javascript
+useEffect(() => {
+  const savedHistory = localStorage.getItem("calcHistory");
+  if (savedHistory) setHistory(JSON.parse(savedHistory));
+}, []);
+
+useEffect(() => {
+  localStorage.setItem("calcHistory", JSON.stringify(history.slice(-10)));
+}, [history]);
+```
+
+## 📱 Responsive Design
+
+The calculator is fully responsive:
+- **Desktop**: Full 8-column layout
+- **Tablet**: Optimized spacing
+- **Mobile**: 4-column layout with touch-friendly buttons
+
+## 🎨 Customization
+
+### Modify Themes
+Edit the CSS variables in `App.css` to customize colors:
+
+```css
+.dark-mode {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  color: #e6e6e6;
+}
+
+.light-mode {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  color: #333;
+}
+```
+
+### Add New Functions
+To add new mathematical functions:
+
+1. Add a new button in the JSX:
+```jsx
+<button onClick={() => handleClick("newFunction(")}>New Func</button>
+```
+
+2. Ensure Math.js supports the function or implement custom logic
+
+## 🧪 Testing
+
+Run tests with:
+```bash
+npm test
+# or
+yarn test
+```
+
+## 📄 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## 🙏 Acknowledgments
+
+- [Math.js](https://mathjs.org/) for mathematical computation
+- [React](https://reactjs.org/) for the UI framework
+- Inspired by traditional scientific calculators and modern web design principles
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📞 Support
+
+For support, email gaurinandanapai@gmail.com or create an issue in the GitHub repository.
+
+---
